@@ -1,0 +1,12 @@
+
+.btn-raised { line-height: 100%; }
+
+#calculator .btn-raised { margin-right: -5rem; }
+
+#calculator .btn-warning { margin-top: 4rem; }
+
+#calculator .btn-danger { margin-top: -1rem; }
+
+#calculator table button {
+    font-size: 1.5em;
+}

@@ -1,0 +1,11 @@
+{
+  "name": "roman-numeral-calculator",
+  "version": "1.0.0",
+  "description": "Sample Project for Q2E Interview",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Joe L. Wroten",
+  "license": "ISC"
+}
