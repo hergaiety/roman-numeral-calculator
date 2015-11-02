@@ -58,6 +58,7 @@ var App = new Vue({
  * @return {[string]}   [roman numeral conversion of provided whole number]
  */
 function intToRoman(n) {
+    if (n <= 0 || n >= 5000) return '';
         // Set up mapping to compare crucial roman numerals to their integet values
     var mapping = {
             'M': 1000, 'CM': 900, 'D': 500, 'CD': 400, 'C': 100,
