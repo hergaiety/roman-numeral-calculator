@@ -4,8 +4,11 @@
   "description": "Sample Project for Q2E Interview",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall": "bower install"
   },
   "author": "Joe L. Wroten",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "bower": "^1.6.5"
+  }
 }
