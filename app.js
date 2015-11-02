@@ -1,10 +1,18 @@
 
+/**
+ * Vue Application Code
+ */
 var App = new Vue({
     el: '#calculator', // Context for 'data' usage
     data: {
         result: 0,
         previousResult: NaN,
         calculation: '' // String that'll hold our calculation, such as '6+4/2*2'
+    },
+    computed: {
+        resultRoman: function() {
+            return this.previousResult ? intToRoman(this.previousResult) : '';
+        }
     },
     methods: {
         // Resets all of our values
@@ -43,6 +51,18 @@ var App = new Vue({
     }
 });
 
+/**
+ * Converts Integer to Roman Numerals
+ * @param  {[number]} n [whole number to be converted]
+ * @return {[string]}   [roman numeral conversion of provided whole number]
+ */
+function intToRoman(n) {
+    return n + 'TODO';
+}
+
+/**
+ * Page Load Initializers and Bindings
+ */
 $(document).ready(function() {
     // This command is used to initialize some elements and make them work properly
     $.material.init();

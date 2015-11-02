@@ -1,5 +1,7 @@
-# roman-numeral-calculator
+# Roman Numeral Calculator
 Whole number calculator that also displays the results in Roman Numerals.
+
+Utilizes Vue and Bootstrap Material Design.
 
 ---
 
