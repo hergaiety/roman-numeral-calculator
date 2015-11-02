@@ -53,11 +53,29 @@ var App = new Vue({
 
 /**
  * Converts Integer to Roman Numerals
+ * Inspired by many stackOverflow roman numeral conversions
  * @param  {[number]} n [whole number to be converted]
  * @return {[string]}   [roman numeral conversion of provided whole number]
  */
 function intToRoman(n) {
-    return n + 'TODO';
+        // Set up mapping to compare crucial roman numerals to their integet values
+    var mapping = {
+            'M': 1000, 'CM': 900, 'D': 500, 'CD': 400, 'C': 100,
+            'XC': 90, 'L': 50, 'XL': 40, 'X': 10, 'IX': 9, 'V': 5, 'IV': 4, 'I': 1
+        },
+        // Placeholder result array. Could also just be a string we append too, but it feels nicer to work with an object and an array
+        result = [];
+    // Loop through each roman numeral
+    _.forEach(mapping, function(int, rom) {
+        // So long as the intToRoman (n) param is greater than the current symbol's matching int...
+        while(n >= int) {
+            // Add the current symbol to our results array
+            result.push(rom);
+            // Take the value of the current symbol's int and subtract it from 'n'. This may happen multiple times, such as "20" becoming "XX"
+            n -= int;
+        }
+    });
+    return result.join('');
 }
 
 /**
