@@ -1,9 +1,5 @@
-$(document).ready(function() {
-    // This command is used to initialize some elements and make them work properly
-    $.material.init();
-});
 
-new Vue({
+var App = new Vue({
     el: '#calculator',
     data: {
         result: 0,
@@ -39,4 +35,36 @@ new Vue({
             }
         }
     }
+});
+
+$(document).ready(function() {
+    // This command is used to initialize some elements and make them work properly
+    $.material.init();
+
+    // Key Bindings
+    $(document).on('keypress', function(event) {
+        switch (event.keyCode) {
+            case 61:  // =
+            case 13:  // Enter
+                App.equals();
+                break;
+            case 47:  // / (Forward Slash... haha)
+                App.calcAdd('/');
+                break;
+            case 42:  // *
+            case 120: // x
+                App.calcAdd('*');
+                break;
+            case 45:  // -
+                App.calcAdd('-');
+                break;
+            case 43:  // +
+                App.calcAdd('+');
+                break;
+            default:
+                if (event.keyCode >= 48 && event.keyCode <= 57) {
+                    App.calcAdd(event.keyCode - 48);
+                }
+        }
+    });
 });
