@@ -6,6 +6,10 @@
     "Joe L. Wroten"
   ],
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:sharpshark28/roman-numeral-calculator.git"  
+  },
   "moduleType": [],
   "homepage": "",
   "private": true,
